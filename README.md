@@ -25,12 +25,16 @@ timeTo(
 )
 ```
 
+Returns a number that is the input time duration in terms of the output time unit specified
+
 #### Example
 
 ```js
 const timeTo = require('timeto')
 
 const msValue = timeTo('1d12h' /* 1 day 12 hours */, 'ms')
+
+console.log(msValue) // 129600000
 ```
 
 #### Additional notes
