@@ -2,6 +2,12 @@
 
 A tiny utility to convert time to another unit
 
+#### Installation
+
+```
+$ npm install timeto
+```
+
 #### Usage
 
 Supported time units:
