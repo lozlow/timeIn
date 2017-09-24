@@ -25,6 +25,15 @@ timeTo(
 )
 ```
 
+Alternatively you can pass a number as the input specified as a time period in milliseconds and return it in another duration
+
+```js
+timeTo(
+  86400000, // a number in milliseconds for the input time
+  'm'       // output value for the time period (defaults to ms)
+)
+```
+
 Returns a number that is the input time duration in terms of the output time unit specified
 
 #### Example

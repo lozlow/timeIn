@@ -7,10 +7,12 @@ const conversions = {
   ms: (v) => v
 }
 
-module.exports = function timeTo (str, out) {
-  const val = str
-    .match(/([0-9]+(y|d|h|m?s?))/g)
-    .reduce((accum, curr) => accum + conversions[curr[curr.length - 1]](curr.slice(0, -1)), 0)
+module.exports = function timeTo (input, out) {
+  const val = isNaN(input)
+    ? input
+        .match(/([0-9]+(y|d|h|m?s?))/g)
+        .reduce((accum, curr) => accum + conversions[curr[curr.length - 1]](curr.slice(0, -1)), 0)
+    : input
 
   return val / conversions[out || 'ms'](1)
 }

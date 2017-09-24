@@ -3,7 +3,7 @@
   "version": "1.1.2",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape test.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,5 +15,8 @@
     "url": "https://github.com/lozlow/timeto/issues"
   },
   "homepage": "https://github.com/lozlow/timeto#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "tape": "^4.8.0"
+  }
 }
