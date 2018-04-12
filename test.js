@@ -83,3 +83,9 @@ test('timeTo takes input milliseconds returns correct year output', (t) => {
   t.equal(result, INPUT_MILLIS / (1000 * 60 * 60 * 24 * 365.25))
   t.end()
 })
+
+test('timeTo takes input object returns correct output', (t) => {
+  const result = timeTo({ d: 1, h: 12 })
+  t.equal(result, RESULT_IN_MILLIS)
+  t.end()
+})

@@ -25,6 +25,15 @@ timeTo(
 )
 ```
 
+It can also take an object of shape `{ /* time unit */ h: 12 /* amount */ }`
+
+```js
+timeTo(
+  { d: 1, h: 12 }, // an object specifying the duration
+  'm'              // output value for the time period (defaults to ms)
+)
+```
+
 Alternatively you can pass a number as the input specified as a time period in milliseconds and return it in another duration
 
 ```js
