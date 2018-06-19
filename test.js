@@ -89,3 +89,15 @@ test('timeTo takes input object returns correct output', (t) => {
   t.equal(result, RESULT_IN_MILLIS)
   t.end()
 })
+
+test('timeTo takes fractional input object returns correct output', (t) => {
+  const result = timeTo({ d: 0.5, h: 24 })
+  t.equal(result, RESULT_IN_MILLIS)
+  t.end()
+})
+
+test('timeTo takes fractional input returns correct output', (t) => {
+  const result = timeTo('0.5d24h')
+  t.equal(result, RESULT_IN_MILLIS)
+  t.end()
+})
