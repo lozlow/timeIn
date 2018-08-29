@@ -101,3 +101,15 @@ test('timeTo takes fractional input returns correct output', (t) => {
   t.equal(result, RESULT_IN_MILLIS)
   t.end()
 })
+
+test('timeTo handles negative time values', (t) => {
+  const result = timeTo('2d-12h')
+  t.equal(result, RESULT_IN_MILLIS)
+  t.end()
+})
+
+test('timeTo handles negative time values in input objects', (t) => {
+  const result = timeTo({ d: 2, h: -12 })
+  t.equal(result, RESULT_IN_MILLIS)
+  t.end()
+})
